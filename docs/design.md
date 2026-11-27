@@ -75,7 +75,7 @@ flowchart LR
 | Part | Choice | Why |
 |---|---|---|
 | Charger | MCP73831, 300 mA (R12 3.3 kΩ) | About 0.75 C for the 400 mAh cell. One SOT-23-5, KiCad symbol in the stock library |
-| Charge light | D1 red LED from VBUS into STAT | Lit while charging, also when the console sleeps. Needs a small light hole in the shell |
+| Charge light | D1 red LED from VBUS into STAT | Lit while charging, also when the console sleeps. Shows through a 1.6 mm light pipe in the shell |
 | Power path | Schottky D2 from USB, P-MOSFET Q1 from the battery | Same idea as the Pico and the RP2350-Plus: the console runs from USB while the battery charges |
 | 3.3 V | TPS63031 buck-boost | Keeps 3.3 V until the cell is almost empty. An LDO drops out below about 3.4 V, which wastes the bottom of the cell |
 | RP2350 core | Internal switcher with L1 3.3 µH | From the RP2350A minimal design |

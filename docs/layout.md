@@ -6,7 +6,7 @@ Coordinates below are in mm from the top-left corner, seen from the front.
 
 ## Front
 
-Under the 2.0" panel (x 1.1 to 48.9, y 4.0 to 38.6) the board carries the processor, flash, crystal, sensors and the display connector. The panel sits on the casing frame about 3.6 mm above the board, so parts here must stay under 2.5 mm. The tallest is the flash (SOIC-8, 2.2 mm).
+Under the 2.0" panel (x 1.1 to 48.9, y 5.7 to 40.3, centred on the display position the casing uses) the board carries the processor, flash, crystal, sensors and the display connector. The panel sits on the casing frame about 3.6 mm above the board, so parts here must stay under 2.5 mm. The tallest is the flash (SOIC-8, 2.2 mm).
 
 Below the panel are the button contacts, at the same centres as the buttons module.
 
@@ -18,7 +18,7 @@ Below the panel are the button contacts, at the same centres as the buttons modu
 | x 15.6, y 17.5 | J3 FPC connector, opening to the left | Same spot as the display module's J2 on main board v4 |
 | Centre | U1 RP2350A (turned 180°), U2 flash, Y1 crystal, L1 | Display pins face J3, radio pins face the RM2, QSPI pins face the flash |
 | Right | U8 IMU, U9 RTC, U10 haptic driver | Near the I²C pins |
-| Top-left corner | D1 charge LED | Needs a light hole in the shell |
+| (8, 2), above the panel | D1 charge LED | Under a 1.6 mm frosted light pipe in the shell, clear of the screw boss at (2.5, 2.5) |
 | D-pad (12.75, 65.1) | SW10 | GBA D-pad pad |
 | B (31.3, 72.0), A (44.5, 67.6) | SW11 | GBA A/B pad |
 | X (31.3, 56.5), Y (44.5, 52.1) | SW12 | Same footprint as A/B |
@@ -41,8 +41,7 @@ Below the panel are the button contacts, at the same centres as the buttons modu
 
 The RM2 antenna is at the top edge, as decided for the next board. The area x 24.15 to 50, y 0 to 5 has no copper on any layer (a rule area in the board). The RM2 footprint's own keep-out reaches 13.5 mm past the edge, which is outside the board.
 
-!!! note "Panel and antenna"
-    Seen from the front, the panel starts at y 4.0, so it overlaps the 5 mm keep-out by 1 mm. The panel is on the other side of the board and 3.6 mm up. Check the range on the first boards.
+The panel starts at y 5.7, so it stays clear of the keep-out.
 
 ## Stack-up and rules
 

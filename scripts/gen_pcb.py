@@ -22,7 +22,7 @@ LOCAL = "chilichip-console"
 
 # ref: (x, y, rotation, side)
 PLACE = {
-    # --- front, under the 2.0" panel (panel 47.8 x 34.6 mm, x 1.1-48.9, y 4.0-38.6). Parts here stay under 2.5 mm.
+    # --- front, under the 2.0" panel (panel 47.8 x 34.6 mm, x 1.1-48.9, y 5.7-40.3 in the casing). Parts here stay under 2.5 mm.
     # The panel's FPC tail folds back under the panel from its left edge into J3: keep x 0-14, y 12-23 clear.
     "J3": (15.55, 17.5, 270, "F"),
     "C30": (19.0, 9.3, 90, "F"), "C31": (21.0, 9.3, 90, "F"),
@@ -41,7 +41,7 @@ PLACE = {
     "U9": (42.5, 24.0, 0, "F"), "C62": (45.5, 23.0, 90, "F"), "C63": (45.5, 25.0, 90, "F"), "R60": (39.5, 24.0, 90, "F"),
     "U10": (42.5, 35.5, 0, "F"), "C64": (38.5, 35.5, 90, "F"), "C65": (46.5, 35.0, 90, "F"), "C66": (47.2, 33.0, 90, "F"),
     "R61": (39.0, 28.0, 90, "F"), "R62": (39.0, 30.5, 90, "F"), "R63": (39.0, 33.0, 0, "F"),
-    "D1": (6.0, 2.0, 0, "F"),  # charge LED, top-left corner above the panel: needs a light hole in the shell
+    "D1": (8.0, 2.0, 0, "F"),  # charge LED above the panel, under a 1.6 mm light pipe in the shell, clear of the screw boss at (2.5, 2.5)
     # --- front, buttons (centres from the buttons module, same as the casing model)
     "SW10": (12.75, 65.1, 0, "F"), "SW11": (31.3, 72.0, 0, "F"), "SW12": (31.3, 56.5, 0, "F"), "SW13": (21.0, 46.1, 0, "F"),
     # --- back. Battery 502540 at x 1.8-41.8, y 58.2-83.2: nothing under it.

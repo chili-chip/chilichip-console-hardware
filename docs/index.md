@@ -3,7 +3,7 @@
 One PCB with the whole console on it. It merges the main board and every module (brain, display, audio, radio, utility and buttons) into a single board that the factory assembles. No hand soldering of modules.
 
 !!! warning "Work in progress, not ordered yet"
-    Schematic and placement are done and pass ERC and DRC. **The board is not routed yet.** Nothing here has been built or tested. See [open points](open-points.md).
+    Schematic, placement and routing are done. ERC is clean and DRC has no errors, but **3 connections at the RP2350 are still open** and need a few minutes in the KiCad router. Nothing here has been built or tested. See [open points](open-points.md).
 
 ![chilichip console board, front, 3D render](images/iso.png){ .render loading=lazy }
 

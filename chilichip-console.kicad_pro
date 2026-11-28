@@ -518,7 +518,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.15,
+        "clearance": 0.127,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -529,7 +529,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
+        "track_width": 0.127,
         "tuning_profile": "",
         "via_diameter": 0.5,
         "via_drill": 0.3,
@@ -537,7 +537,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.15,
+        "clearance": 0.127,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -548,7 +548,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.35,
+        "track_width": 0.3,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -556,7 +556,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.15,
+        "clearance": 0.127,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -601,27 +601,27 @@
         "pattern": "BB_L2"
       },
       {
-        "netclass": "Power",
+        "netclass": "Supply",
         "pattern": "SPK_P"
       },
       {
-        "netclass": "Power",
+        "netclass": "Supply",
         "pattern": "SPK_N"
       },
       {
-        "netclass": "Power",
+        "netclass": "Supply",
         "pattern": "MOT_P"
       },
       {
-        "netclass": "Power",
+        "netclass": "Supply",
         "pattern": "MOT_N"
       },
       {
-        "netclass": "Power",
+        "netclass": "Supply",
         "pattern": "LED_A"
       },
       {
-        "netclass": "Power",
+        "netclass": "Supply",
         "pattern": "LED_K"
       },
       {
@@ -791,8 +791,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "vgc-zero.kicad_sch",
-        "name": "vgc-zero",
+        "filename": "chilichip-console.kicad_sch",
+        "name": "chilichip-console",
         "uuid": "d6dba08b-49bf-412e-8449-ecb85e54b8e9"
       }
     ],

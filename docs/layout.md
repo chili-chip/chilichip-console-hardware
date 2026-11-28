@@ -49,10 +49,38 @@ The panel starts at y 5.7, so it stays clear of the keep-out.
 |---|---|
 | Layers | 4: F.Cu signals, In1.Cu solid ground, In2.Cu signals + ground fill, B.Cu signals + ground fill |
 | Thickness | 1.6 mm |
-| Track / clearance | 0.15 / 0.15 mm (signals), 0.25 mm (3V3, 1V1), 0.35 mm (battery, USB power, speaker, motor, backlight) |
+| Track / clearance | 0.127 / 0.127 mm (signals), 0.25 mm (3V3, 1V1, speaker, motor, backlight), 0.3 mm (battery, USB power, buck-boost inductor) |
 | Vias | 0.5 / 0.3 mm (JLCPCB standard, no extra cost) |
 | Thermal vias | 0.2 mm in the RP2350, MAX98357A and TPS63031 pads |
 | Copper to edge | 0.3 mm |
+
+## Routing
+
+The board is autorouted with Freerouting 1.9.0 by `scripts/route.py`:
+
+1. Every ground pad gets a short track and a via to the In1 ground plane (fanout). These are locked so the router keeps them.
+2. Freerouting routes all other nets on F.Cu, In2.Cu and B.Cu.
+3. Ground pours fill F.Cu, In2.Cu and B.Cu. Vias on a 2.5 mm grid tie the pours to In1, and every pour island gets at least one via.
+
+| | |
+|---|---|
+| Tracks | about 1,250 segments, 2.4 m in total |
+| Vias | 466 (about 270 of them ground stitching) |
+| Open | 3 connections at U1, see [open points](open-points.md) |
+
+No vias sit in the antenna keep-out or under the USB-C shell.
+
+=== "F.Cu (front)"
+
+    ![Front copper](images/routing-front.png){ .render loading=lazy }
+
+=== "In2.Cu"
+
+    ![Inner signal layer](images/routing-in2.png){ .render loading=lazy }
+
+=== "B.Cu (seen from the back)"
+
+    ![Back copper, seen from the back](images/routing-back.png){ .render loading=lazy }
 
 ## Heights
 

@@ -2,7 +2,7 @@
 
 KiCad project for the all-in-one chilichip console PCB: the main board and all modules (RP2350, 2.0" screen, audio, radio, sensors, haptics, buttons) on one fully assembled board. 50 × 83.9 mm, 4 layers, fits the Slab casing.
 
-**Status:** schematic and placement done, ERC and DRC clean. Not routed, not built.
+**Status:** schematic, placement and routing done. 3 connections at the RP2350 still open (see docs, open points). Not built.
 
 ![Front, 3D render](docs/images/iso.png)
 

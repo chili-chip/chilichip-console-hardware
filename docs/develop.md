@@ -25,9 +25,11 @@ python3 scripts/gen_sch.py
 kicad-cli sch erc --severity-error chilichip-console.kicad_sch
 kicad-cli sch export netlist --format kicadsexpr -o /tmp/console.net chilichip-console.kicad_sch
 python3 scripts/gen_pcb.py /tmp/console.net
-python3 scripts/route.py /path/to/freerouting.jar      # optional: autoroute
+python3 scripts/route.py /path/to/freerouting-1.9.0.jar   # autoroute (needs Java and xvfb-run)
 kicad-cli pcb drc --schematic-parity chilichip-console.kicad_pcb
 ```
+
+Freerouting does not give the same result every run. The committed board needed a second pass on a few nets: rip up their tracks, export the DSN from the routed board, route again and import. Check DRC after every run.
 
 ```mermaid
 flowchart LR
@@ -41,6 +43,7 @@ flowchart LR
 ```bash
 kicad-cli pcb render --side top --width 1000 --height 1500 -o docs/images/top.png chilichip-console.kicad_pcb
 kicad-cli pcb render --side bottom --width 1000 --height 1500 -o docs/images/bottom.png chilichip-console.kicad_pcb
+kicad-cli pcb render --width 1376 --height 1176 --rotate '-35,0,20' --perspective --zoom 0.7 -o docs/images/iso.png chilichip-console.kicad_pcb
 kicad-cli sch export svg --exclude-drawing-sheet -o docs/schematics chilichip-console.kicad_sch
 ```
 

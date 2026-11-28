@@ -1,0 +1,200 @@
+(footprint "MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "MicroCrystal C7 SON, 8 Pin (https://www.microcrystal.com/fileadmin/Media/Products/RTC/App.Manual/RV-3028-C7_App-Manual.pdf#page=107)")
+	(tags "MicroCrystal SON NoLead MicroCrystal-RV3028-C7")
+	(property "Reference" "REF**"
+		(at 0 -2.63 0)
+		(layer "F.SilkS")
+		(uuid "d8489277-dc6f-4578-8b57-862e4f618306")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm"
+		(at 0 2.63 0)
+		(layer "F.Fab")
+		(uuid "20bc6972-cfb5-411c-8aef-adb2cdc75b1a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "df6779af-2a68-46c3-b01b-efd4a1f0f29a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cfe35235-1279-454f-8430-ccee4dd3f891")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "package/no_lead"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "0bea173e-b9cc-4e02-a250-1f4d75c6616f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.86 -1.935)
+		(end 0.86 -1.935)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "edb75b36-b044-4361-a0da-c4a5d759aa6d")
+	)
+	(fp_line
+		(start 0.86 1.935)
+		(end -0.86 1.935)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e4535997-2b57-4dfc-88a9-f5d636338dc8")
+	)
+	(fp_poly
+		(pts
+			(xy -1.27 -1.82) (xy -1.55 -1.82) (xy -1.27 -2.1)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "d29e34ec-443a-46bb-89a4-5709e060fc28")
+	)
+	(fp_rect
+		(start -1.38 -1.93)
+		(end 1.38 1.93)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "d1afd342-1655-4d3d-bc69-9639aa719468")
+	)
+	(fp_poly
+		(pts
+			(xy -0.375 -1.6) (xy 0.75 -1.6) (xy 0.75 1.6) (xy -0.75 1.6) (xy -0.75 -1.225)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "4e69911f-f75a-468a-be2f-b45aa7ce8028")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 90)
+		(layer "F.Fab")
+		(uuid "7af82cdb-6bb7-48ae-99c5-936ffef59106")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.65 -1.35)
+		(size 0.95 0.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "32f7b67f-dfda-4686-84ec-6cd3cbe9149b")
+	)
+	(pad "2" smd roundrect
+		(at -0.65 -0.45)
+		(size 0.95 0.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "c6421429-5900-4d75-b7af-9c2e5b25a8db")
+	)
+	(pad "3" smd roundrect
+		(at -0.65 0.45)
+		(size 0.95 0.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "5fc1c443-a498-4336-a14d-6728ea430488")
+	)
+	(pad "4" smd roundrect
+		(at -0.65 1.35)
+		(size 0.95 0.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "4d14eb79-41e5-44d9-918c-07d466345ddf")
+	)
+	(pad "5" smd roundrect
+		(at 0.65 1.35)
+		(size 0.95 0.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "c25b6a12-3e2e-4646-a6a4-97877373e318")
+	)
+	(pad "6" smd roundrect
+		(at 0.65 0.45)
+		(size 0.95 0.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "614ada5b-9b8b-4a26-a92b-c991180e443c")
+	)
+	(pad "7" smd roundrect
+		(at 0.65 -0.45)
+		(size 0.95 0.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "9143de67-b80e-4395-81d6-cd7b6a618b73")
+	)
+	(pad "8" smd roundrect
+		(at 0.65 -1.35)
+		(size 0.95 0.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "e63b0c7e-9758-4aa1-838d-364f1d0db0bf")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d-models/MicroCrystal_RV-3028-C7_C7-SON-8.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)

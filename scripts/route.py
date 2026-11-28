@@ -106,7 +106,7 @@ def via_fits(b, x, y, net, skip=None):
     """True when a GND via at board position (x, y) mm clears every other copper item on all layers."""
     p = pcbnew.VECTOR2I(mm(OX + x), mm(OY + y))
     r = VIA_D / 2 + GAP
-    ax0, ay0, ax1, ay1 = ANTENNA
+    ax0, _, ax1, ay1 = ANTENNA
     if ax0 - r < x < ax1 + r and y < ay1 + r:
         return False
     for t in b.GetTracks():
@@ -187,7 +187,9 @@ def unconnected_gnd_pads(b):
     out = "/tmp/console-drc.json"
     subprocess.run(["kicad-cli", "pcb", "drc", "--format", "json", "-o", out, BOARD], check=True, capture_output=True)
     want = set()
-    for u in json.load(open(out))["unconnected_items"]:
+    with open(out) as f:
+        report = json.load(f)
+    for u in report["unconnected_items"]:
         for item in u["items"]:
             d = item["description"]
             if d.startswith("Pad ") and "[GND]" in d:
@@ -270,9 +272,7 @@ def connect_pad(b, pad, gnd, via_only=False):
             # end on another ground pad, inside a tied pour (0.3 mm deep), or on a new via
             if any(o is not pad and o.GetNetCode() == net and o.IsOnLayer(layer) and o.HitTest(v)
                    and (not via_only or any(o.HitTest(w) for w in vias))  # before routing: only a pad with vias
-                   for o in pad.GetParentFootprint().Pads()):
-                via = False
-            elif not via_only and all(fill.Contains(pcbnew.VECTOR2I(v.x + mm(dx), v.y + mm(dy)))
+                   for o in pad.GetParentFootprint().Pads()) or not via_only and all(fill.Contains(pcbnew.VECTOR2I(v.x + mm(dx), v.y + mm(dy)))
                    for dx, dy in [(0, 0), (0.3, 0), (-0.3, 0), (0, 0.3), (0, -0.3)]):
                 via = False
             elif via_fits(b, x, y, net, skip=pad):
